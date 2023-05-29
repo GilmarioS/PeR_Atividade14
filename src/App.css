@@ -1,38 +1,143 @@
-.App {
-  text-align: center;
+/* Estilo para a barra de título */
+.title-bar {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.title-bar h1 {
+  margin: 0;
+  font-size: 24px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* Estilo para a grade de dados */
+.data-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  justify-items: center;
+  align-items: center;
+  grid-gap: 20px;
+  overflow-x: auto;
+  white-space: nowrap;
+  max-width: 100%;
+  padding-bottom: 10px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.data-item {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  border: 1px solid #ccc;
+  padding: 10px;
+  min-width: 200px;
 }
 
-.App-link {
-  color: #61dafb;
+/* Estilo para o grupo de botões */
+.button-group {
+  margin-top: 0px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.edit-button,
+.delete-button,
+.add-button {
+  background-color: #007bff;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  color: #fff;
+  padding: 5px 10px;
+  transition: background-color 0.3s;
+  margin-left: 10px;
+}
+
+.edit-button:hover,
+.delete-button:hover,
+.add-button:hover {
+  background-color: #0056b3;
+}
+
+.edit-button:focus,
+.delete-button:focus,
+.add-button:focus {
+  outline: none;
+}
+
+/* Estilo para a barra de título repetido */
+.title-bar {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+/* Estilo para adicionar item */
+.add-item {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.add-item input {
+  margin-right: 5px;
+  padding: 5px;
+}
+
+/* Estilo para os botões de atualizar e cancelar */
+.update-button,
+.cancel-button {
+  background-color: #007bff;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  color: #fff;
+  padding: 5px 10px;
+  transition: background-color 0.3s;
+  margin-left: 10px;
+}
+
+.update-button:hover,
+.cancel-button:hover {
+  background-color: #0056b3;
+}
+
+.update-button:focus,
+.cancel-button:focus {
+  outline: none;
+}
+
+/* Estilo para adicionar item (continuação) */
+.add-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.add-item input {
+  margin-bottom: 5px;
+  padding: 5px;
+}
+
+.add-item .add-button {
+  margin-left: 0;
+}
+
+.add-item .add-button:hover {
+  background-color: #0056b3;
+}
+
+@media screen and (min-width: 600px) {
+  /* Estilos para telas maiores */
+  .add-item {
+    flex-direction: row;
+    justify-content: center;
   }
-  to {
-    transform: rotate(360deg);
+
+  .add-item input {
+    margin-bottom: 0;
   }
 }
